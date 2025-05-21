@@ -10,8 +10,8 @@ import os
 # Configuración inicial
 load_dotenv()
 #IMPORTANT
-API_KEY = os.getenv("GEMINI_API_KEY") # (Habilítalo únicamente para pruebas locales)
-#API_KEY = st.secrets["GEMINI_API_KEY"] # (Habilítalo para deploy en Streamlit Cloud)
+#API_KEY = os.getenv("GEMINI_API_KEY") # (Habilítalo únicamente para pruebas locales)
+API_KEY = st.secrets["GEMINI_API_KEY"] # (Habilítalo para deploy en Streamlit Cloud)
 genai.configure(api_key=API_KEY)
 model = genai.GenerativeModel("gemini-2.0-flash")
 
